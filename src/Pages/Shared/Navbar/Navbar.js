@@ -19,8 +19,7 @@ const Navbar = () => {
         {
             user?.email ?
                 <>
-                    <li><Link to="/myreviews" className='mr-2 font-semibold'>My Reviews</Link></li>
-                    <li><Link className='mr-2 font-semibold' to='/addservices'>Add Services</Link></li>
+                    <li><Link to="/dashboard" className='mr-2 font-semibold'>Dashboard</Link></li>
                     <li><Link onClick={handleLogOut} className='mr-2 font-semibold'>Log Out</Link></li>
                 </>
                 :
@@ -46,14 +45,15 @@ const Navbar = () => {
                     <img className='w-12' src={logo} alt="" />
                 </Link>
             </div>
+            <div className="navbar-start">
+                <h2 className="text-3xl">Motorbike Storehouse</h2>
+            </div>
             <div className="navbar-end hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
                     {menuItems}
                 </ul>
             </div>
-            {/* <div className="navbar-end">
-                <button className="btn btn-outline btn-secondary">Appoinment</button>
-            </div> */}
+
         </div>
     );
 };
