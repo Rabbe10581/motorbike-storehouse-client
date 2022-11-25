@@ -11,7 +11,7 @@ const Category = ({ brandCategory }) => {
                 <h2 className="card-title">{brandName}</h2>
                 <p>If a dog chews shoes whose shoes does he choose?</p>
                 <div className="card-actions">
-                    <button className="btn btn-primary">Buy Now</button>
+                    <button className="btn btn-primary">Show Products</button>
                 </div>
             </div>
         </div>
