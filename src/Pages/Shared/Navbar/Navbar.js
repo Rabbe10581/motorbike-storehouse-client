@@ -14,7 +14,7 @@ const Navbar = () => {
 
     const menuItems = <>
         <li><Link className='mr-2 font-semibold' to='/'>Home</Link></li>
-        <li><Link className='mr-2 font-semibold' to='/services'>Services</Link></li>
+        <li><Link className='mr-2 font-semibold' to='/brands'>Brands</Link></li>
         <li><Link className='mr-2 font-semibold' to='/blog'>Blog</Link></li>
         {
             user?.email ?
@@ -32,7 +32,7 @@ const Navbar = () => {
     </>
 
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-neutral text-neutral-content">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">

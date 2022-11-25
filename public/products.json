@@ -1,0 +1,17 @@
+[
+    {
+        "category_id": "1",
+        "brandName": "Yamaha",
+        "image": "https://i.ibb.co/QYtymbC/Yamaha-Logo.png"
+    },
+    {
+        "category_id": "2",
+        "brandName": "Sujuki",
+        "image": "https://i.ibb.co/g6W9Fh7/Suzuki-logo-1.png"
+    },
+    {
+        "category_id": "1",
+        "brandName": "Bajaj",
+        "image": "https://i.ibb.co/dLVLT59/Bajaj.png"
+    }
+]
