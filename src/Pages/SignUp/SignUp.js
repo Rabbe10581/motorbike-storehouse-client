@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 // import { toast } from 'react-toastify';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
@@ -11,6 +11,8 @@ const SignUp = () => {
     const { createUser, updateUser } = useContext(AuthContext);
     const [signUpError, setSignUPError] = useState('')
     const [createUsersMail, setCreateUsersMail] = useState('')
+    const navigate = useNavigate();
+
     const handleSignUp = (data) => {
         console.log(data);
         setSignUPError('');
@@ -26,6 +28,7 @@ const SignUp = () => {
                 updateUser(userInfo)
                     .then(() => {
                         saveUser(data.name, data.email, data.option);
+                        navigate('/');
                     })
                     .catch(err => console.log(err));
             })
