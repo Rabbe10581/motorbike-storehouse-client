@@ -1,14 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import { useQuery } from '@tanstack/react-query';
 import Category from './Category';
 
 const BrandsCategories = () => {
-    const [brandCategories, setBrandCategories] = useState([])
+    // const [brandCategories, setBrandCategories] = useState([])
 
-    useEffect(() => {
-        fetch('http://localhost:5000/categories')
-            .then(res => res.json())
-            .then(data => setBrandCategories(data))
-    }, [])
+    //Use query to load data
+    const { data: brandCategories = [] } = useQuery({
+        queryKey: ['brandCategories'],
+        queryFn: async () => {
+            const res = await fetch('http://localhost:5000/categories')
+            const data = await res.json();
+            return data;
+        }
+    })
+
+    // useEffect(() => {
+    //     fetch('http://localhost:5000/categories')
+    //         .then(res => res.json())
+    //         .then(data => setBrandCategories(data))
+    // }, [])
 
     return (
         <div>
