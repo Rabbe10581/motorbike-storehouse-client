@@ -2,16 +2,70 @@
     {
         "category_id": "1",
         "brandName": "Yamaha",
-        "image": "https://i.ibb.co/QYtymbC/Yamaha-Logo.png"
+        "image": "https://i.ibb.co/QYtymbC/Yamaha-Logo.png",
+        "products": [
+            {
+                "name": "R15 v4",
+                "Image": "https://i.ibb.co/8Xt8GCY/r15.webp",
+                "location": "Dhaka",
+                "resalePrice": "2500",
+                "originalPrice": "3000",
+                "use": "6"
+            },
+            {
+                "name": "XSR",
+                "Image": "https://i.ibb.co/6XHQz2X/xsr.webp",
+                "location": "Rajshahi",
+                "resalePrice": "2500",
+                "originalPrice": "3000",
+                "use": "6"
+            }
+        ]
     },
     {
         "category_id": "2",
         "brandName": "Suzuki",
-        "image": "https://i.ibb.co/g6W9Fh7/Suzuki-logo-1.png"
+        "image": "https://i.ibb.co/g6W9Fh7/Suzuki-logo-1.png",
+        "products": [
+            {
+                "name": "GSX-R 150CC",
+                "Image": "https://i.ibb.co/CnKCXsh/GSX.jpg",
+                "location": "Sylhet",
+                "resalePrice": "2500",
+                "originalPrice": "3000",
+                "use": "6"
+            },
+            {
+                "name": "Gixxer",
+                "Image": "https://i.ibb.co/0r2gGMk/Gixxer.jpg",
+                "location": "Khulna",
+                "resalePrice": "2500",
+                "originalPrice": "3000",
+                "use": "6"
+            }
+        ]
     },
     {
         "category_id": "1",
         "brandName": "Bajaj",
-        "image": "https://i.ibb.co/dLVLT59/Bajaj.png"
+        "image": "https://i.ibb.co/dLVLT59/Bajaj.png",
+        "products": [
+            {
+                "name": "GSX-R 150CC",
+                "Image": "https://i.ibb.co/CnKCXsh/GSX.jpg",
+                "location": "Sylhet",
+                "resalePrice": "2500",
+                "originalPrice": "3000",
+                "use": "6"
+            },
+            {
+                "name": "Gixxer",
+                "Image": "https://i.ibb.co/0r2gGMk/Gixxer.jpg",
+                "location": "Khulna",
+                "resalePrice": "2500",
+                "originalPrice": "3000",
+                "use": "6"
+            }
+        ]
     }
 ]

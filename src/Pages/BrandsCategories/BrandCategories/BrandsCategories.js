@@ -2,7 +2,6 @@ import { useQuery } from '@tanstack/react-query';
 import Category from './Category';
 
 const BrandsCategories = () => {
-    // const [brandCategories, setBrandCategories] = useState([])
 
     //Use query to load data
     const { data: brandCategories = [] } = useQuery({
@@ -13,12 +12,6 @@ const BrandsCategories = () => {
             return data;
         }
     })
-
-    // useEffect(() => {
-    //     fetch('http://localhost:5000/categories')
-    //         .then(res => res.json())
-    //         .then(data => setBrandCategories(data))
-    // }, [])
 
     return (
         <div>
