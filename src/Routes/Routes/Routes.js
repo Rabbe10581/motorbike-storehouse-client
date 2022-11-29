@@ -3,8 +3,10 @@ import DashboardLayout from "../../Layout/DashboardLayout";
 import Main from "../../Layout/Main"
 import BrandsCategories from "../../Pages/BrandsCategories/BrandCategories/BrandsCategories";
 import BrandProducts from "../../Pages/BrandsCategories/BrandProducts/BrandProducts";
+import AddProduct from "../../Pages/Dashboard/AddProduct/AddProduct";
 import Dashboard from "../../Pages/Dashboard/Dashboard/Dashboard";
 import MyOrders from "../../Pages/Dashboard/MyOrders/MyOrders";
+import MyProducts from "../../Pages/Dashboard/MyProducts/MyProducts";
 import Home from "../../Pages/Home/Home/Home"
 import Login from "../../Pages/Login/Login";
 import SignUp from "../../Pages/SignUp/SignUp";
@@ -51,7 +53,16 @@ const router = createBrowserRouter([
             {
                 path: '/dashboard/myorders',
                 element: <PrivateRoute><MyOrders></MyOrders></PrivateRoute>
-            }
+            },
+            {
+                path: '/dashboard/addproducts',
+                element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>
+            },
+            {
+                path: '/dashboard/myproducts',
+                element: <PrivateRoute><MyProducts></MyProducts></PrivateRoute>
+            },
+
         ]
     }
 ])

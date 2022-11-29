@@ -13,14 +13,15 @@ const BrandProducts = () => {
     // const { name } = products;
     return (
         <div>
-            <h2 className="text-3xl">This is Brand Products</h2>
-            {
-                products?.map((product, i) => <ProductCard
-                    key={product.i}
-                    product={product}
-                    setOrders={setOrders}
-                ></ProductCard>)
-            }
+            <div className='grid grid-cols-1 md:grid-cols-2 my-6 mx-auto'>
+                {
+                    products?.map((product, i) => <ProductCard
+                        key={i}
+                        product={product}
+                        setOrders={setOrders}
+                    ></ProductCard>)
+                }
+            </div>
 
             {
                 orders &&
