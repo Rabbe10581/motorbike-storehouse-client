@@ -3,7 +3,7 @@ import toast from 'react-hot-toast';
 import { AuthContext } from '../../../../contexts/AuthProvider/AuthProvider';
 
 const OrderModal = ({ orders, setOrders }) => {
-    const { name: ordersName, resalePrice } = orders;
+    const { name, resalePrice, Image } = orders;
     console.log(orders);
     const { user } = useContext(AuthContext);
 
@@ -14,10 +14,12 @@ const OrderModal = ({ orders, setOrders }) => {
         const phone = form.phone.value;
         const location = form.location.value;
         const order = {
+            name,
             email,
             phone,
             resalePrice,
-            location
+            location,
+            Image
         }
 
         fetch('http://localhost:5000/orders', {
@@ -46,7 +48,7 @@ const OrderModal = ({ orders, setOrders }) => {
             <div className="modal">
                 <div className="modal-box relative">
                     <label htmlFor="booking-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                    <h3 className="text-lg font-bold">{ordersName}</h3>
+                    <h3 className="text-lg font-bold">{name}</h3>
                     <form onSubmit={handleBooking} className='grid grid-cols-1 gap-3 mt-10'>
                         <input name="name" type="text" defaultValue={user?.displayName} disabled placeholder="Your Name" className="input w-full input-bordered" />
                         <input name="email" type="email" defaultValue={user?.email} disabled placeholder="Email Address" className="input w-full input-bordered" />
