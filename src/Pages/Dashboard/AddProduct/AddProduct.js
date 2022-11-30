@@ -11,7 +11,7 @@ const AddProduct = () => {
 
     const navigate = useNavigate();
 
-    const handleAddDoctor = data => {
+    const handleAddBike = data => {
         const image = data.image[0];
         const formData = new FormData();
         formData.append('image', image);
@@ -36,7 +36,7 @@ const AddProduct = () => {
                     }
 
                     // save doctor information to the database
-                    fetch('http://localhost:5000/products', {
+                    fetch('https://resale-storehouse-server.vercel.app/products', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',
@@ -60,8 +60,8 @@ const AddProduct = () => {
 
     return (
         <div className='w-96 p-7'>
-            <h2 className="text-4xl">Add A Doctor</h2>
-            <form onSubmit={handleSubmit(handleAddDoctor)}>
+            <h2 className="text-4xl">Add A Bike</h2>
+            <form onSubmit={handleSubmit(handleAddBike)}>
                 <div className="form-control w-full max-w-xs">
                     <label className="label"> <span className="label-text">Name</span></label>
                     <input type="text" {...register("name", {
@@ -118,7 +118,7 @@ const AddProduct = () => {
                     })} className="input input-bordered w-full max-w-xs" />
                     {errors.img && <p className='text-red-500'>{errors.img.message}</p>}
                 </div>
-                <input className='btn btn-accent w-full mt-4' value="Add Doctor" type="submit" />
+                <input className='btn btn-accent w-full mt-4' value="Add Bike" type="submit" />
             </form>
         </div>
     );
