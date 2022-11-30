@@ -22,15 +22,10 @@ const router = createBrowserRouter([
                 path: '/',
                 element: <Home></Home>
             },
-            // {
-            //     path: '/brands',
-            //     element: <BrandsCategories></BrandsCategories>
-            // },
-
             {
-                path: '/categories/:id',
+                path: '/categories/:brandName',
                 element: <BrandProducts></BrandProducts>,
-                loader: ({ params }) => fetch(`http://localhost:5000/categories/${params.id}`),
+                loader: ({ params }) => fetch(`https://resale-storehouse-server.vercel.app/categories/${params.brandName}`),
             },
             {
                 path: "/blog",

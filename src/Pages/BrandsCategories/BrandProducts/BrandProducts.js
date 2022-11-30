@@ -6,16 +6,16 @@ import ProductCard from './ProductCard';
 const BrandProducts = () => {
     const categories = useLoaderData();
     const [orders, setOrders] = useState(null);
-    // console.log(categories);
-    const products = categories.products;
-    console.log(products);
+    console.log({ categories });
+    // const products = categories.products;
+    // console.log(products);
     // console.log(name);
     // const { name } = products;
     return (
         <div>
             <div className='grid grid-cols-1 md:grid-cols-2 my-6 mx-auto'>
                 {
-                    products?.map((product, i) => <ProductCard
+                    categories?.map((product, i) => <ProductCard
                         key={i}
                         product={product}
                         setOrders={setOrders}

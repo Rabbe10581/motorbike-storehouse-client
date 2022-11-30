@@ -14,7 +14,7 @@ const Navbar = () => {
 
     const menuItems = <>
         <li><Link className='mr-2 font-semibold' to='/'>Home</Link></li>
-        <li><Link className='mr-2 font-semibold' to='/brands'>Brands</Link></li>
+        {/* <li><Link className='mr-2 font-semibold' to='/brands'>Brands</Link></li> */}
         <li><Link className='mr-2 font-semibold' to='/blog'>Blog</Link></li>
         {
             user?.email ?
