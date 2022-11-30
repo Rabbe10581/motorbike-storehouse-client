@@ -4,6 +4,7 @@ import toast from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
 // import { toast } from 'react-toastify';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import useToken from '../../useHooks/useToken/useToken';
 
 const SignUp = () => {
 
@@ -11,7 +12,12 @@ const SignUp = () => {
     const { createUser, updateUser } = useContext(AuthContext);
     const [signUpError, setSignUPError] = useState('')
     const [createUsersMail, setCreateUsersMail] = useState('')
+    const [token] = useToken(createUsersMail);
     const navigate = useNavigate();
+
+    if (token) {
+        navigate('/');
+    }
 
     const handleSignUp = (data) => {
         console.log(data);
@@ -28,7 +34,7 @@ const SignUp = () => {
                 updateUser(userInfo)
                     .then(() => {
                         saveUser(data.name, data.email, data.option);
-                        navigate('/');
+                        // navigate('/');
                     })
                     .catch(err => console.log(err));
             })

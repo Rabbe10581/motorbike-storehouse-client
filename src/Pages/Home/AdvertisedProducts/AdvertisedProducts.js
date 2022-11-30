@@ -7,11 +7,7 @@ const AdvertisedProducts = () => {
     const [advertisementProducts, setAdvertisementProducts] = useState([])
 
     useEffect(() => {
-        fetch(`https://resale-storehouse-server.vercel.app/anik`, {
-            // headers: {
-            //     authorization: Bearer ${localStorage.getItem('accessToken')}
-            // }
-        })
+        fetch(`https://resale-storehouse-server.vercel.app/anik`, {})
             .then(res => res.json())
             .then(data => setAdvertisementProducts(data))
     }, [])

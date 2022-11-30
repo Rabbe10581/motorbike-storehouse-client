@@ -55,11 +55,6 @@ const AddProduct = () => {
                 }
             })
     }
-
-    // if (isLoading) {
-    //     return <Loading></Loading>
-    // }
-
     return (
         <div className='w-96 p-7'>
             <h2 className="text-4xl">Add A Bike</h2>
