@@ -10,8 +10,8 @@ const Category = ({ brandCategory }) => {
                     <img src={image} alt="Shoes" className="rounded-xl h-[180px]" />
                 </figure>
                 <div className="card-body items-center text-center">
-                    <h2 className="card-title text-white">{brandName}</h2>
-                    <p className='text-white'>Your Dream is here. Use it to make life more easier.</p>
+                    <h2 className="card-title font-bold">{brandName}</h2>
+                    <p className='font-bold'>Your Dream is here. Use it to make life more easier.</p>
                     <div className="card-actions">
                         <button className="btn btn-primary">Show Products</button>
                     </div>
