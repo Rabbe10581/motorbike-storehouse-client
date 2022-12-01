@@ -5,7 +5,7 @@ const Category = ({ brandCategory }) => {
     const { brandName, image, _id } = brandCategory;
     return (
         <Link to={`/categories/${brandName}`}>
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card w-96 bg-slate-400 rounded-md shadow-xl">
                 <figure className="px-10 pt-10">
                     <img src={image} alt="Shoes" className="rounded-xl h-[180px]" />
                 </figure>
