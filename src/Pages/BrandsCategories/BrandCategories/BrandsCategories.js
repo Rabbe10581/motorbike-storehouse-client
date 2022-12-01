@@ -15,7 +15,7 @@ const BrandsCategories = () => {
 
     return (
         <div>
-            <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-6 mx-6'>
+            <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-14 mx-6'>
                 {
                     brandCategories.map(category => <Category
                         key={category.category_id}

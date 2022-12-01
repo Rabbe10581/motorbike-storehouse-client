@@ -13,18 +13,18 @@ const Navbar = () => {
     }
 
     const menuItems = <>
-        <li><Link className='mr-2 font-semibold' to='/'>Home</Link></li>
+        <li><Link className='mr-2 font-semibold bg-slate-500' to='/'>Home</Link></li>
         {/* <li><Link className='mr-2 font-semibold' to='/brands'>Brands</Link></li> */}
-        <li><Link className='mr-2 font-semibold' to='/blog'>Blog</Link></li>
+        <li><Link className='mr-2 font-semibold bg-slate-500' to='/blog'>Blog</Link></li>
         {
             user?.email ?
                 <>
-                    <li><Link to="/dashboard" className='mr-2 font-semibold'>Dashboard</Link></li>
-                    <li><Link onClick={handleLogOut} className='mr-2 font-semibold'>Log Out</Link></li>
+                    <li><Link to="/dashboard" className='mr-2 font-semibold bg-slate-500'>Dashboard</Link></li>
+                    <li><Link onClick={handleLogOut} className='mr-2 font-semibold bg-slate-500'>Log Out</Link></li>
                 </>
                 :
                 <>
-                    <li><Link className='mr-2 font-semibold' to='/login'>Login</Link></li>
+                    <li><Link className='mr-2 font-semibold bg-slate-500' to='/login'>Login</Link></li>
                 </>
 
         }
