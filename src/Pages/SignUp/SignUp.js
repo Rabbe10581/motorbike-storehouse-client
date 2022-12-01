@@ -11,13 +11,10 @@ const SignUp = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const { createUser, updateUser } = useContext(AuthContext);
     const [signUpError, setSignUPError] = useState('')
-    const [createUsersMail, setCreateUsersMail] = useState('')
-    const [token] = useToken(createUsersMail);
-    const navigate = useNavigate();
+    const [createdUserEmail, setCreatedUserEmail] = useState('')
+    const [token] = useToken(createdUserEmail);
 
-    if (token) {
-        navigate('/');
-    }
+    const navigate = useNavigate();
 
     const handleSignUp = (data) => {
         console.log(data);
@@ -34,7 +31,7 @@ const SignUp = () => {
                 updateUser(userInfo)
                     .then(() => {
                         saveUser(data.name, data.email, data.option);
-                        // navigate('/');
+                        navigate('/');
                     })
                     .catch(err => console.log(err));
             })
@@ -45,7 +42,7 @@ const SignUp = () => {
     }
     const saveUser = (name, email, role) => {
         const user = { name, email, role };
-        fetch('https://resale-storehouse-server.vercel.app/users', {
+        fetch('http://localhost:5000/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -54,7 +51,7 @@ const SignUp = () => {
         })
             .then(res => res.json())
             .then(data => {
-                setCreateUsersMail(email);
+                setCreatedUserEmail(email);
                 console.log(data);
             })
     }

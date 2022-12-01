@@ -7,7 +7,7 @@ const MyOrders = () => {
 
     const { user } = useContext(AuthContext);
 
-    const url = `https://resale-storehouse-server.vercel.app/orders?email=${user?.email}`;
+    const url = `http://localhost:5000/orders?email=${user?.email}`;
 
     const { data: orders = [] } = useQuery({
         queryKey: ['orders', user?.email],

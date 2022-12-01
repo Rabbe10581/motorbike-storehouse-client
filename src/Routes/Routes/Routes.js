@@ -5,6 +5,9 @@ import Blog from "../../Pages/Blog/Blog";
 import BrandsCategories from "../../Pages/BrandsCategories/BrandCategories/BrandsCategories";
 import BrandProducts from "../../Pages/BrandsCategories/BrandProducts/BrandProducts";
 import AddProduct from "../../Pages/Dashboard/AddProduct/AddProduct";
+import AllBuyers from "../../Pages/Dashboard/Admin/AllBuyers/AllBuyers";
+import AllSellers from "../../Pages/Dashboard/Admin/AllSellers/AllSellers";
+import ReportedProducts from "../../Pages/Dashboard/Admin/ReportedProducts/ReportedProducts";
 import Dashboard from "../../Pages/Dashboard/Dashboard/Dashboard";
 import MyOrders from "../../Pages/Dashboard/MyOrders/MyOrders";
 import MyProducts from "../../Pages/Dashboard/MyProducts/MyProducts";
@@ -25,7 +28,7 @@ const router = createBrowserRouter([
             {
                 path: '/categories/:brandName',
                 element: <BrandProducts></BrandProducts>,
-                loader: ({ params }) => fetch(`https://resale-storehouse-server.vercel.app/categories/${params.brandName}`),
+                loader: ({ params }) => fetch(`http://localhost:5000/categories/${params.brandName}`),
             },
             {
                 path: "/blog",
@@ -66,6 +69,18 @@ const router = createBrowserRouter([
             {
                 path: '/dashboard/myproducts',
                 element: <PrivateRoute><MyProducts></MyProducts></PrivateRoute>
+            },
+            {
+                path: '/dashboard/allbuyers',
+                element: <PrivateRoute><AllBuyers></AllBuyers></PrivateRoute>
+            },
+            {
+                path: '/dashboard/allsellers',
+                element: <PrivateRoute><AllSellers></AllSellers></PrivateRoute>
+            },
+            {
+                path: '/dashboard/reportedproducts',
+                element: <PrivateRoute><ReportedProducts></ReportedProducts></PrivateRoute>
             },
 
         ]

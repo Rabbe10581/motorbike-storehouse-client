@@ -17,7 +17,7 @@ const DashboardLayout = () => {
     }, [user])
 
     const getUserInfo = async (email) => {
-        const data = await fetch(`https://resale-storehouse-server.vercel.app/user/${email}`, {
+        const data = await fetch(`http://localhost:5000/user/${email}`, {
             method: 'GET'
         })
         const userInfo = await data.json();
@@ -39,7 +39,6 @@ const DashboardLayout = () => {
                 <div className="drawer-side">
                     <label htmlFor="dashboard-drawer" className="drawer-overlay"></label>
                     <ul className="menu p-4 w-80 text-base-content">
-                        <li><Link to="/dashboard">My Appointments</Link></li>
                         {
                             isAdmin ? <>
                                 <li className='border rounded font-bold text-xl mb-5 '><Link to='/dashboard/allsellers'>All Sellers</Link></li>

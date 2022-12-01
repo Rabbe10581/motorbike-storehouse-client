@@ -6,7 +6,7 @@ const MyProductCard = ({ product, handleDeleteProducts }) => {
     const { _id, name, email, Image, price, phone, condition, location, year, brandName } = product;
 
     const handleAdvertise = id => {
-        fetch(`https://resale-storehouse-server.vercel.app/advertise/${id}`, {
+        fetch(`http://localhost:5000/advertise/${id}`, {
             method: 'PUT',
             // headers: {
             //     authorization: bearer ${localStorage.getItem('accessToken')}
