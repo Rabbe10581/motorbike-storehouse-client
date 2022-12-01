@@ -10,7 +10,7 @@ const useGetUsers = () => {
     const getAllUser = async () => {
         try {
             setLoading(true)
-            const res = await fetch(`http://localhost:5000/users`)
+            const res = await fetch(`https://resale-storehouse-server.vercel.app/users`)
             const data = await res.json()
             if (data) setUsers(data);
         }

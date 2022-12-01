@@ -7,7 +7,7 @@ const AllProducts = () => {
     const { data: allproducts = [] } = useQuery({
         queryKey: ['allproducts'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/allproducts');
+            const res = await fetch('https://resale-storehouse-server.vercel.app/allproducts');
             const data = await res.json();
             console.log(data);
             return data;

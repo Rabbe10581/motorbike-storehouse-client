@@ -17,7 +17,7 @@ const DashboardLayout = () => {
     }, [user])
 
     const getUserInfo = async (email) => {
-        const data = await fetch(`http://localhost:5000/user/${email}`, {
+        const data = await fetch(`https://resale-storehouse-server.vercel.app/user/${email}`, {
             method: 'GET'
         })
         const userInfo = await data.json();

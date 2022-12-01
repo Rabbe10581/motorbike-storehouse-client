@@ -22,7 +22,7 @@ const OrderModal = ({ orders, setOrders }) => {
             Image
         }
 
-        fetch('http://localhost:5000/orders', {
+        fetch('https://resale-storehouse-server.vercel.app/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

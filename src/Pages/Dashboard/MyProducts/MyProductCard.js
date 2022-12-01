@@ -3,14 +3,11 @@ import toast from 'react-hot-toast';
 
 const MyProductCard = ({ product, handleDeleteProducts }) => {
     console.log(product);
-    const { _id, name, email, Image, price, phone, condition, location, year, brandName } = product;
+    const { _id } = product;
 
     const handleAdvertise = id => {
-        fetch(`http://localhost:5000/advertise/${id}`, {
+        fetch(`https://resale-storehouse-server.vercel.app/advertise/${id}`, {
             method: 'PUT',
-            // headers: {
-            //     authorization: bearer ${localStorage.getItem('accessToken')}
-            // }
         })
             .then(res => res.json())
             .then(data => {
