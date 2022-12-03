@@ -1,3 +1,9 @@
+Lve Site:   https://resale-storehouse.web.app/
+<br/>
+<br/>
+--Used Packages--
+<br/>
+
 *   React base project
 *   Node js
 *   Express js
